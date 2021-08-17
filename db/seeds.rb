@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'seeding horrible articles'
+
+10.times do
+  Article.create!(
+    title: Faker::Creature::Animal.name,
+    content: Faker::Games::SuperMario.character
+  )
+end
+
+puts 'finished seeding...'
